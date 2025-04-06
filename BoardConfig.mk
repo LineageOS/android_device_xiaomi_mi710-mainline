@@ -17,6 +17,7 @@ BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_COMMON_KERNEL_PARAMS) \
     $(MAINLINE_QCOM_KERNEL_PARAMS) \
     androidboot.boot_devices=soc@0/1d84000.ufshc \
+    androidboot.serialno=meow \
     androidboot.verifiedbootstate=orange \
     console=tty0
 
