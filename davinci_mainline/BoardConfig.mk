@@ -1,0 +1,35 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Inherit from parent
+include device/xiaomi/mi7150/BoardConfig.mk
+
+# Boot parameters
+BOARD_KERNEL_CMDLINE += \
+    androidboot.hardware=davinci
+
+# Display
+TARGET_SCREEN_DENSITY := 440
+
+# Fastboot
+TARGET_BOARD_FASTBOOT_INFO_FILE := $(TARGET_DEVICE_PATH)/misc/fastboot-info.txt
+
+# OTA
+TARGET_OTA_ASSERT_DEVICE := davinci_mainline,davinci,davinciin
+
+# Partitions
+BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
+BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3758096384
+BOARD_VENDORIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_PARTITION_SIZE := 1610612736
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(TARGET_DEVICE_PATH)/fstab/fstab.davinci
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(TARGET_DEVICE_PATH)/misc

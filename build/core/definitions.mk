@@ -1,0 +1,13 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+ifeq ($(USES_DEVICE_XIAOMI_MI7150),true)
+
+ESP_PARTITION_NAME := cust
+
+INSTALLED_ESPIMAGE_TARGET := $(PRODUCT_OUT)/$(ESP_PARTITION_NAME).img
+INSTALLED_RADIOIMAGE_TARGET += $(INSTALLED_ESPIMAGE_TARGET)
+
+endif
