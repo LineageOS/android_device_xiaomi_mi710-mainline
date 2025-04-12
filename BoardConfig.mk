@@ -31,8 +31,20 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := gki_defconfig sm7150.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mi7150
+
+TARGET_KERNEL_CONFIG := \
+    defconfig \
+    sm7150.config
+
+TARGET_KERNEL_CONFIG_EXT := \
+    kernel/mainline/configs/fragments/y/arm64/gki_pre.config \
+    kernel/mainline/configs/fragments/y/arm64/gki.config \
+    kernel/mainline/configs/fragments/y/arm64/gki_post.config \
+    kernel/mainline/configs/fragments/y/common.config \
+    kernel/mainline/configs/fragments/y/fbcon.config \
+    kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
+    kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
 #BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load))

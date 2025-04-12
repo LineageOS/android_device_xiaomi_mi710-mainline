@@ -22,6 +22,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/init.mi7150.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi7150.rc
 
+PRODUCT_PACKAGES += \
+    kernel_mainline_configs_init_pristine-mainline-support
+
 # Images
 PRODUCT_BUILD_BOOT_IMAGE := true
 PRODUCT_BUILD_RAMDISK_IMAGE := true
@@ -50,7 +53,8 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    kernel/mainline/configs
 
 # Inherit from vendor
 $(call inherit-product-if-exists, vendor/xiaomi/mi7150/mi7150-vendor.mk)
