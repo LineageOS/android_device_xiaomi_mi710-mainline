@@ -20,6 +20,10 @@ $(call inherit-product, device/xiaomi/mi7150/device.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2340
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,external/firmware-xiaomi-davinci/lib/firmware/,$(TARGET_COPY_OUT_VENDOR)/firmware/)
+
 # Init
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.davinci:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.davinci \
