@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-USES_DEVICE_XIAOMI_MI7150 := true
+USES_DEVICE_XIAOMI_MI7150_MAINLINE := true
 
 # Inherit from mainline/qcom-common
 include device/mainline/qcom-common/BoardConfigMainlineQcomCommon.mk
@@ -31,7 +31,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi7150
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi7150-mainline
 
 TARGET_KERNEL_CONFIG := \
     defconfig \
@@ -71,4 +71,4 @@ DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/vintf/manifest.xml
 
 # Inherit from vendor
--include vendor/xiaomi/mi7150/BoardConfigVendor.mk
+-include vendor/xiaomi/mi7150-mainline/BoardConfigVendor.mk

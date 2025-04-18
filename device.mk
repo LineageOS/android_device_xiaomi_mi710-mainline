@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/mi7150
+DEVICE_PATH := device/xiaomi/mi7150-mainline
 
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
@@ -57,4 +57,4 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/mainline/configs
 
 # Inherit from vendor
-$(call inherit-product-if-exists, vendor/xiaomi/mi7150/mi7150-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/mi7150-mainline/mi7150-mainline-vendor.mk)

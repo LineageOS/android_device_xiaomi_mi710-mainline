@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_DEVICE_PATH := device/xiaomi/mi7150/davinci_mainline
+TARGET_DEVICE_PATH := device/xiaomi/mi7150-mainline/davinci_mainline
 
 # Inherit options from mainline/qcom-common
 ## SoC
@@ -14,7 +14,7 @@ TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
-$(call inherit-product, device/xiaomi/mi7150/device.mk)
+$(call inherit-product, device/xiaomi/mi7150-mainline/device.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080

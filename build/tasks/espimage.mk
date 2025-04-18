@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifeq ($(USES_DEVICE_XIAOMI_MI7150),true)
+ifeq ($(USES_DEVICE_XIAOMI_MI7150_MAINLINE),true)
 
 BOOTMGR_TOOLS_BIN_DIR := prebuilts/bootmgr/tools/$(HOST_PREBUILT_TAG)/bin
 

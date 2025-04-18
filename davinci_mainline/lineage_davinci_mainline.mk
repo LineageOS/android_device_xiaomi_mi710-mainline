@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from device
-$(call inherit-product, device/xiaomi/mi7150/davinci_mainline/device.mk)
+$(call inherit-product, device/xiaomi/mi7150-mainline/davinci_mainline/device.mk)
 
 PRODUCT_NAME := lineage_davinci_mainline
 PRODUCT_DEVICE := davinci_mainline
