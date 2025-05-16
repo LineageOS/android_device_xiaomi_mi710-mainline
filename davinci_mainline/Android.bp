@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "firmware_davinci_symlink",
+    vendor: true,
+    installed_location: "firmware/qcom/sm7150/davinci",
+    symlink_target: "/odm/firmware/qcom/sm7150/davinci",
+}
