@@ -1,0 +1,138 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "symlink_firmware_davinci",
+    vendor: true,
+    installed_location: "firmware/qcom/sm7150/davinci",
+    symlink_target: "/odm/firmware/qcom/sm7150/davinci",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_modem_pr",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/modem_pr",
+    symlink_target: "/vendor/firmware_mnt/image/modem_pr",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_adspr.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/adspr.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/adspr.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_adsps.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/adsps.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/adsps.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_adspua.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/adspua.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/adspua.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_cdspr.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/cdspr.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/cdspr.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_modemr.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/modemr.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/modemr.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_modemuw.jsn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/modemuw.jsn",
+    symlink_target: "/vendor/firmware_mnt/image/modemuw.jsn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_wlanmdsp.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/wlanmdsp.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/wlanmdsp.mbn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_adsp.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/adsp.mbn",
+    symlink_target: "/vendor/firmware_gen/adsp.mbn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_cdsp.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/cdsp.mbn",
+    symlink_target: "/vendor/firmware_gen/cdsp.mbn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_modem.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/modem.mbn",
+    symlink_target: "/vendor/firmware_gen/modem.mbn",
+}
+
+install_symlink {
+    name: "symlink_firmware_davinci_venus.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/venus.mbn",
+    symlink_target: "/vendor/firmware_gen/venus.mbn",
+}
+
+genrule {
+    name: "gen_firmware_davinci_ipa_fws.mbn",
+    tools: ["pil-squasher"],
+    out: ["ipa_fws.mbn"],
+    cmd: "$(location pil-squasher) $(out) ../../../../../vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.mdt",
+}
+
+prebuilt_firmware {
+    name: "firmware_davinci_ipa_fws.mbn",
+    src: ":gen_firmware_davinci_ipa_fws.mbn",
+    filename_from_src: true,
+    device_specific: true,
+    sub_dir: "qcom/sm7150/davinci",
+}
+
+// Workaround soong installing device_specific prebuilt_firmware module to /odm/etc/firmware
+install_symlink {
+    name: "symlink_firmware_davinci_ipa_fws.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/sm7150/davinci/ipa_fws.mbn",
+    symlink_target: "/odm/etc/firmware/qcom/sm7150/davinci/ipa_fws.mbn",
+}
+
+phony {
+    name: "all_symlink_firmware_davinci",
+    required: [
+        "symlink_firmware_davinci",
+        "symlink_firmware_davinci_adsp.mbn",
+        "symlink_firmware_davinci_adspr.jsn",
+        "symlink_firmware_davinci_adsps.jsn",
+        "symlink_firmware_davinci_adspua.jsn",
+        "symlink_firmware_davinci_cdsp.mbn",
+        "symlink_firmware_davinci_cdspr.jsn",
+        "symlink_firmware_davinci_ipa_fws.mbn",
+        "symlink_firmware_davinci_modem.mbn",
+        "symlink_firmware_davinci_modem_pr",
+        "symlink_firmware_davinci_modemr.jsn",
+        "symlink_firmware_davinci_modemuw.jsn",
+        "symlink_firmware_davinci_venus.mbn",
+        "symlink_firmware_davinci_wlanmdsp.mbn",
+    ],
+}

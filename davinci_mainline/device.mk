@@ -24,7 +24,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sm7150/davinci/a615_zap.mbn
 
 PRODUCT_PACKAGES += \
-    firmware_davinci_symlink
+    all_symlink_firmware_davinci \
+    firmware_davinci_ipa_fws.mbn
 
 # Init
 PRODUCT_COPY_FILES += \
