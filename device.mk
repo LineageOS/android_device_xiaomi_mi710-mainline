@@ -22,9 +22,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/init/init.mi7150.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi7150.rc
 
-PRODUCT_PACKAGES += \
-    use_memfd.rc
-
 # Images
 PRODUCT_BUILD_BOOT_IMAGE := true
 PRODUCT_BUILD_RAMDISK_IMAGE := true
