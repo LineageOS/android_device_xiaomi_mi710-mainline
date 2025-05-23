@@ -1,6 +1,8 @@
 # fastboot-info for davinci_mainline
 version 1
 
+update-super
+
 flash cust
 
 flash system

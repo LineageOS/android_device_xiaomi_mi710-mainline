@@ -26,7 +26,7 @@
 /dev/block/by-name/recovery /recovery emmc defaults defaults
 
 # System
-/dev/block/by-name/system /system ext4 noatime,ro first_stage_mount
+system /system ext4 noatime,ro logical,first_stage_mount
 
 # USB
 /devices/platform/soc@0/a6f8800.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
@@ -36,4 +36,4 @@
 /dev/block/by-name/userdata /data f2fs nodev,noatime,nosuid,discard,reserve_root=32768 latemount,check,quota,formattable
 
 # Vendor
-/dev/block/by-name/vendor /vendor ext4 noatime,ro first_stage_mount
+vendor /vendor ext4 noatime,ro logical,first_stage_mount
