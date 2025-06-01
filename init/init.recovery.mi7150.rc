@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import /init.recovery.mainline.qcom.rc
+import /system/etc/init/hw/init.recovery.mainline.qcom.rc
 
 on early-boot
     write /sys/class/backlight/ae94000.dsi.0/brightness 1023
