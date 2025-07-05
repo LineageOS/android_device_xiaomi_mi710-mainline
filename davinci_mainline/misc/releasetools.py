@@ -36,5 +36,5 @@ def AddImage(info, basename, dest, images_dir = "IMAGES"):
 
 def OTA_InstallEnd(info):
   AddImage(info, "cust.img", "/dev/block/by-name/cust", images_dir = "RADIO")
-  AddImage(info, "u-boot-sm7150-xiaomi-davinci.img", "/dev/block/by-name/boot", images_dir = "RADIO")
+  AddImage(info, "u-boot-sm7150-xiaomi-davinci-usb-peripheral.img", "/dev/block/by-name/boot", images_dir = "RADIO")
   return
