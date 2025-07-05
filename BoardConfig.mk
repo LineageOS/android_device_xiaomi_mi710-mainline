@@ -41,6 +41,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/mi7150-mainline
 
 TARGET_KERNEL_CONFIG := \
     defconfig \
+    efi.config \
     sm7150.config
 
 TARGET_KERNEL_CONFIG_EXT := \
