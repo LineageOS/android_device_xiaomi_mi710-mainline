@@ -6,91 +6,91 @@
 install_symlink {
     name: "symlink_firmware_davinci",
     vendor: true,
-    installed_location: "firmware/qcom/sm7150/davinci",
-    symlink_target: "/odm/firmware/qcom/sm7150/davinci",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci",
+    symlink_target: "/odm/firmware/qcom/sm7150/xiaomi/davinci",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_modem_pr",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/modem_pr",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/modem_pr",
     symlink_target: "/vendor/firmware_mnt/image/modem_pr",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_adspr.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/adspr.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/adspr.jsn",
     symlink_target: "/vendor/firmware_mnt/image/adspr.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_adsps.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/adsps.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/adsps.jsn",
     symlink_target: "/vendor/firmware_mnt/image/adsps.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_adspua.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/adspua.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/adspua.jsn",
     symlink_target: "/vendor/firmware_mnt/image/adspua.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_cdspr.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/cdspr.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/cdspr.jsn",
     symlink_target: "/vendor/firmware_mnt/image/cdspr.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_modemr.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/modemr.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/modemr.jsn",
     symlink_target: "/vendor/firmware_mnt/image/modemr.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_modemuw.jsn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/modemuw.jsn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/modemuw.jsn",
     symlink_target: "/vendor/firmware_mnt/image/modemuw.jsn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_wlanmdsp.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/wlanmdsp.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/wlanmdsp.mbn",
     symlink_target: "/vendor/firmware_mnt/image/wlanmdsp.mbn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_adsp.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/adsp.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/adsp.mbn",
     symlink_target: "/vendor/firmware_gen/adsp.mbn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_cdsp.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/cdsp.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/cdsp.mbn",
     symlink_target: "/vendor/firmware_gen/cdsp.mbn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_modem.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/modem.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/modem.mbn",
     symlink_target: "/vendor/firmware_gen/modem.mbn",
 }
 
 install_symlink {
     name: "symlink_firmware_davinci_venus.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/venus.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/venus.mbn",
     symlink_target: "/vendor/firmware_gen/venus.mbn",
 }
 
@@ -106,15 +106,15 @@ prebuilt_firmware {
     src: ":gen_firmware_davinci_ipa_fws.mbn",
     filename_from_src: true,
     device_specific: true,
-    sub_dir: "qcom/sm7150/davinci",
+    sub_dir: "qcom/sm7150/xiaomi/davinci",
 }
 
 // Workaround soong installing device_specific prebuilt_firmware module to /odm/etc/firmware
 install_symlink {
     name: "symlink_firmware_davinci_ipa_fws.mbn",
     device_specific: true,
-    installed_location: "firmware/qcom/sm7150/davinci/ipa_fws.mbn",
-    symlink_target: "/odm/etc/firmware/qcom/sm7150/davinci/ipa_fws.mbn",
+    installed_location: "firmware/qcom/sm7150/xiaomi/davinci/ipa_fws.mbn",
+    symlink_target: "/odm/etc/firmware/qcom/sm7150/xiaomi/davinci/ipa_fws.mbn",
 }
 
 phony {

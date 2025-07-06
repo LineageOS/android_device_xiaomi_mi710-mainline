@@ -36,7 +36,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sm7150/davinci/a615_zap.mbn
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sm7150/xiaomi/davinci/a615_zap.mbn
 
 PRODUCT_PACKAGES += \
     all_symlink_firmware_davinci \
