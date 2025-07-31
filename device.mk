@@ -40,6 +40,9 @@ PRODUCT_PACKAGES += \
     use_memfd.rc
 
 # Kernel
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/modprobe/modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/modules.blocklist
+
 PRODUCT_PACKAGES += \
     modules.load.normal
 
