@@ -31,7 +31,8 @@ PRODUCT_PACKAGES += \
     fstab.mi710 \
     fstab.mi710.ramdisk \
     init.mi710.rc \
-    init.recovery.mi710.rc
+    init.recovery.mi710.rc \
+    ueventd.mi710.rc
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_mi710_mainline)
 
