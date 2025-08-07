@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.mi7150.rc",
+    src: "init.mi7150.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mi7150.rc",
+    src: "init.recovery.mi7150.rc",
+    sub_dir: "init",
+    recovery: true,
+}

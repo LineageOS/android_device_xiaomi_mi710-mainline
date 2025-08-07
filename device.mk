@@ -19,8 +19,9 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/init.mi7150.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi7150.rc
+PRODUCT_PACKAGES += \
+    init.mi7150.rc \
+    init.recovery.mi7150.rc
 
 # Images
 PRODUCT_BUILD_BOOT_IMAGE := true
@@ -28,8 +29,8 @@ PRODUCT_BUILD_RAMDISK_IMAGE := true
 PRODUCT_BUILD_RECOVERY_IMAGE := true
 
 # Kernel
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
+PRODUCT_PACKAGES += \
+    modules.load.normal
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
@@ -40,10 +41,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/init.recovery.mi7150.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mi7150.rc
 
 # Scoped Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)

@@ -16,8 +16,8 @@ include device/mainline/qcom-common/optional/options.mk
 $(call inherit-product, device/xiaomi/mi7150-mainline/device.mk)
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.xml,$(TARGET_DEVICE_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc/)
+PRODUCT_PACKAGES += \
+    audio.davinci_mainline.xml
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -43,14 +43,7 @@ PRODUCT_PACKAGES += \
     firmware_davinci_ipa_fws.mbn
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.davinci:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.davinci \
-    $(TARGET_DEVICE_PATH)/init/init.davinci.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.davinci.rc
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/init/init.recovery.davinci.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.davinci.rc
-
-# Vendor ramdisk
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.davinci:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.davinci
+PRODUCT_PACKAGES += \
+    fstab.davinci \
+    fstab.davinci.vendor_ramdisk \
+    init.davinci.rc
