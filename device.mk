@@ -23,6 +23,8 @@ PRODUCT_PACKAGES += \
     init.mi7150.rc \
     init.recovery.mi7150.rc
 
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_mi7150_mainline)
+
 # Images
 PRODUCT_BUILD_BOOT_IMAGE := true
 PRODUCT_BUILD_RAMDISK_IMAGE := true
