@@ -74,6 +74,9 @@ TARGET_BOARD_PLATFORM := mi7150
 # Ramdisk
 BOARD_RAMDISK_USE_LZ4 := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/misc
+
 # VINTF
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/vintf/manifest.xml
