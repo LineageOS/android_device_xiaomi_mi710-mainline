@@ -15,6 +15,9 @@ include device/mainline/qcom-common/optional/options.mk
 # Inherit from parent
 $(call inherit-product, device/xiaomi/mi7150-mainline/device.mk)
 
+# AAPT
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.davinci_mainline.xml
