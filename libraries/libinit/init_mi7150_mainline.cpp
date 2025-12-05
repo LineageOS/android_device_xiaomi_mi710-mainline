@@ -6,13 +6,13 @@
 
 #include "vendor_init.h"
 
-#include <libinit_dalvik_heap.h>
+#include <libinit_mainline_common.h>
 #include <libinit_utils.h>
 
 static constexpr char kSerialFile[] = "/sys/devices/virtual/dmi/id/product_serial";
 static constexpr char kSerialProp[] = "ro.serialno";
 
 void vendor_load_properties() {
-    set_dalvik_heap();
+    vendor_load_properties_mainline_common();
     set_prop_from_file(kSerialProp, kSerialFile);
 }
