@@ -35,7 +35,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi7150-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/sm7150-mainline
 
 TARGET_KERNEL_CONFIG := \
     defconfig \
