@@ -14,15 +14,15 @@ GRUB_PREBUILT_DIR := prebuilts/bootmgr/grub/linux-arm64/$(GRUB_ARCH)
 
 ESP_OUT_DIR := $(TARGET_OUT_INTERMEDIATES)/ESP
 
-INSTALLED_ESPIMAGE_TARGET_INCLUDE_FILES := \
+INSTALLED_MI7150_ESPIMAGE_TARGET_INCLUDE_FILES := \
     $(PRODUCT_OUT)/boot.img \
     $(PRODUCT_OUT)/recovery.img \
     $(PRODUCT_OUT)/vendor_boot.img
 
-INSTALLED_ESPIMAGE_TARGET_DEPS := \
+INSTALLED_MI7150_ESPIMAGE_TARGET_DEPS := \
     $(GRUB_BOOT_EFI_PREBUILT) \
     $(GRUB_CONFIGS) \
-    $(INSTALLED_ESPIMAGE_TARGET_INCLUDE_FILES) \
+    $(INSTALLED_MI7150_ESPIMAGE_TARGET_INCLUDE_FILES) \
     $(INSTALLED_KERNEL_TARGET)
 
 # $(1): output file
@@ -38,8 +38,8 @@ define create-fat32image
 endef
 
 define make-espimage-target
-	$(hide) mkdir -p $(dir $(INSTALLED_ESPIMAGE_TARGET))
-	$(call pretty,"Target EFI System Partition image: $(INSTALLED_ESPIMAGE_TARGET)")
+	$(hide) mkdir -p $(dir $(INSTALLED_MI7150_ESPIMAGE_TARGET))
+	$(call pretty,"Target EFI System Partition image: $(INSTALLED_MI7150_ESPIMAGE_TARGET)")
 
 	mkdir -p $(ESP_OUT_DIR)/EFI/BOOT $(ESP_OUT_DIR)/boot/grub/fonts
 
@@ -55,18 +55,18 @@ define make-espimage-target
 	mkdir -p $(ESP_OUT_DIR)/dtb/qcom/
 	cp $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm64/boot/dts/qcom/sm7150-xiaomi-*.dtb $(ESP_OUT_DIR)/dtb/qcom/
 
-	$(call create-fat32image,$(INSTALLED_ESPIMAGE_TARGET),$(ESP_OUT_DIR)/* $(INSTALLED_ESPIMAGE_TARGET_INCLUDE_FILES),EFI)
+	$(call create-fat32image,$(INSTALLED_MI7150_ESPIMAGE_TARGET),$(ESP_OUT_DIR)/* $(INSTALLED_MI7150_ESPIMAGE_TARGET_INCLUDE_FILES),EFI)
 endef
 
-$(INSTALLED_ESPIMAGE_TARGET): $(INSTALLED_ESPIMAGE_TARGET_DEPS)
+$(INSTALLED_MI7150_ESPIMAGE_TARGET): $(INSTALLED_MI7150_ESPIMAGE_TARGET_DEPS)
 	$(call make-espimage-target)
 
 .PHONY: espimage
-espimage: $(INSTALLED_ESPIMAGE_TARGET)
+espimage: $(INSTALLED_MI7150_ESPIMAGE_TARGET)
 
 .PHONY: espimage-nodeps
 espimage-nodeps:
-	@echo "make $(INSTALLED_ESPIMAGE_TARGET): ignoring dependencies"
+	@echo "make $(INSTALLED_MI7150_ESPIMAGE_TARGET): ignoring dependencies"
 	$(call make-espimage-target)
 
 endif
