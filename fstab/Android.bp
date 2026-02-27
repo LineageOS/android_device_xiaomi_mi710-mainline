@@ -4,8 +4,8 @@
 //
 
 prebuilt_etc {
-    name: "fstab.pyxis",
-    src: "fstab.pyxis",
+    name: "fstab.mi710",
+    src: "fstab.mi710",
+    ramdisk_available: true,
     vendor: true,
-    vendor_ramdisk_available: true,
 }

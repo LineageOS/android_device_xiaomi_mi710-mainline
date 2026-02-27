@@ -33,9 +33,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/xiaomi/pyxis/proprietary/vendor/etc/sensors/config/,$(TARGET_COPY_OUT_VENDOR)/etc/hexagonrpcd-root/sensors/config/) \
     vendor/xiaomi/pyxis/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/hexagonrpcd-root/sensors/sns_reg.conf
 
-# Dynamic partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # Firmware
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/pyxis/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sdm710/xiaomi/pyxis/a615_zap.mbn
@@ -46,6 +43,4 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.pyxis \
-    fstab.pyxis.vendor_ramdisk \
     init.pyxis.rc

@@ -14,22 +14,22 @@ TARGET_BOOTANIMATION_HALF_RES := true
 # Dalvik heap
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # HIDL
 PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.mi710 \
+    fstab.mi710.ramdisk \
     init.mi710.rc \
     init.recovery.mi710.rc
 
 PRODUCT_PACKAGES += \
     use_memfd.rc
-
-# Images
-PRODUCT_BUILD_BOOT_IMAGE := true
-PRODUCT_BUILD_RAMDISK_IMAGE := true
-PRODUCT_BUILD_RECOVERY_IMAGE := true
 
 # Kernel
 PRODUCT_PACKAGES += \
