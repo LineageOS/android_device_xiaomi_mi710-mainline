@@ -28,6 +28,9 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2340
 
 # Firmware
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/sdm710-common/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sdm710/pyxis/a615_zap.mbn
+
 PRODUCT_PACKAGES += \
     all_symlink_firmware_pyxis
 
