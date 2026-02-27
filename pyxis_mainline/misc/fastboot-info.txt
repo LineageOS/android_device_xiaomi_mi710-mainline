@@ -5,6 +5,9 @@ update-super
 
 flash boot
 
+flash system_dlkm
+flash vendor_dlkm
+
 flash product
 flash system
 flash system_ext
