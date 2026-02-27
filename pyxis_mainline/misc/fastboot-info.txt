@@ -3,7 +3,7 @@ version 1
 
 update-super
 
-flash cust
+flash boot
 
 flash system
 flash vendor

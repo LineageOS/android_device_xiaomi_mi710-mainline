@@ -23,8 +23,6 @@ PRODUCT_PACKAGES += \
     init.mi710.rc \
     init.recovery.mi710.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_mi710_mainline)
-
 PRODUCT_PACKAGES += \
     use_memfd.rc
 

@@ -3,7 +3,6 @@
 ## Before flashing the Android build
 
 1. Erase dtbo partition: `fastboot erase dtbo`
-2. Flash the appropriate U-Boot build from [here](https://github.com/sdm710-mainline/u-boot/releases) to boot partition.
 
 ## Additional repositories required to build
 

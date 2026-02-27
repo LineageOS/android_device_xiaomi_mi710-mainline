@@ -14,8 +14,7 @@ AB_OTA_UPDATER := false
 # Boot parameters
 BOARD_BOOTCONFIG := \
     $(MAINLINE_COMMON_ANDROIDBOOT_PARAMS) \
-    $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS) \
-    androidboot.verifiedbootstate=orange
+    $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS)
 
 BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_COMMON_KERNEL_PARAMS) \
@@ -39,7 +38,6 @@ TARGET_KERNEL_SOURCE := kernel/mainline/sdm710-mainline
 
 TARGET_KERNEL_CONFIG := \
     defconfig \
-    efi.config \
     sdm710.config
 
 TARGET_KERNEL_CONFIG_EXT := \
@@ -73,9 +71,6 @@ TARGET_BOARD_PLATFORM := mi710
 
 # Ramdisk
 BOARD_RAMDISK_USE_LZ4 := true
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/misc
 
 # VINTF
 DEVICE_MANIFEST_FILE := \
