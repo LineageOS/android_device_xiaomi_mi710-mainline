@@ -4,11 +4,11 @@
 #
 
 # Inherit from parent
-include device/xiaomi/mi7150-mainline/BoardConfig.mk
+include device/xiaomi/mi710-mainline/BoardConfig.mk
 
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
-    androidboot.hardware=davinci
+    androidboot.hardware=pyxis
 
 # Display
 TARGET_SCREEN_DENSITY := 440
@@ -17,7 +17,7 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(TARGET_DEVICE_PATH)/misc/fastboot-info.txt
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := davinci_mainline,davinci,davinciin
+TARGET_OTA_ASSERT_DEVICE := pyxis_mainline,pyxis,pyxisin
 
 # Partitions
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
@@ -34,9 +34,9 @@ BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 3758096384
 BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 1610612736
 BOARD_SUPER_PARTITION_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE) + $(BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE))
 
-BOARD_SUPER_PARTITION_GROUPS := davinci_dynpart
+BOARD_SUPER_PARTITION_GROUPS := pyxis_dynpart
 BOARD_DAVINCI_DYNPART_PARTITION_LIST := system vendor
 BOARD_DAVINCI_DYNPART_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304 )
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(TARGET_DEVICE_PATH)/fstab/fstab.davinci
+TARGET_RECOVERY_FSTAB := $(TARGET_DEVICE_PATH)/fstab/fstab.pyxis

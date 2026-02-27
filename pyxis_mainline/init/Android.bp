@@ -4,8 +4,8 @@
 //
 
 prebuilt_etc {
-    name: "init.davinci.rc",
-    src: "init.davinci.rc",
+    name: "init.pyxis.rc",
+    src: "init.pyxis.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

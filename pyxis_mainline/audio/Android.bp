@@ -4,8 +4,7 @@
 //
 
 prebuilt_etc {
-    name: "fstab.davinci",
-    src: "fstab.davinci",
+    name: "audio.pyxis_mainline.xml",
+    src: "audio.pyxis_mainline.xml",
     vendor: true,
-    vendor_ramdisk_available: true,
 }

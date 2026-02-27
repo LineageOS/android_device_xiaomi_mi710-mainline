@@ -3,4 +3,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import /vendor/etc/init/hw/init.mi7150.rc
+import /vendor/etc/init/hw/init.mi710.rc

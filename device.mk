@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/mi7150-mainline
+DEVICE_PATH := device/xiaomi/mi710-mainline
 
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
@@ -20,10 +20,10 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mi7150.rc \
-    init.recovery.mi7150.rc
+    init.mi710.rc \
+    init.recovery.mi710.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_mi7150_mainline)
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_mi710_mainline)
 
 PRODUCT_PACKAGES += \
     use_memfd.rc
@@ -59,4 +59,4 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/mainline/configs
 
 # Inherit from vendor
-$(call inherit-product-if-exists, vendor/xiaomi/mi7150-mainline/mi7150-mainline-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/mi710-mainline/mi710-mainline-vendor.mk)

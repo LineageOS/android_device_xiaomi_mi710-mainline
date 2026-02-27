@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "init_mi7150_mainline",
-    srcs: ["init_mi7150_mainline.cpp"],
+    name: "init_mi710_mainline",
+    srcs: ["init_mi710_mainline.cpp"],
     defaults: ["init_mainline_common_defaults"],
 }

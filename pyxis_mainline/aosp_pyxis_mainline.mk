@@ -7,14 +7,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Inherit from device
-$(call inherit-product, device/xiaomi/mi7150-mainline/davinci_mainline/device.mk)
+$(call inherit-product, device/xiaomi/mi710-mainline/pyxis_mainline/device.mk)
 
-PRODUCT_NAME := lineage_davinci_mainline
-PRODUCT_DEVICE := davinci_mainline
+PRODUCT_NAME := aosp_pyxis_mainline
+PRODUCT_DEVICE := pyxis_mainline
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Mi 9T
+PRODUCT_MODEL := Mi 9 Lite

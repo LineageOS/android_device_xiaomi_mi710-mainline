@@ -1,4 +1,4 @@
-# fastboot-info for davinci_mainline
+# fastboot-info for pyxis_mainline
 version 1
 
 update-super

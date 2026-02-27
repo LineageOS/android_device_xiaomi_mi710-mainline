@@ -1,16 +1,16 @@
-# Android device tree for Xiaomi devices with SM7150 SoC running mainline kernel
+# Android device tree for Xiaomi devices with SDM710 SoC running mainline kernel
 
 ## Before flashing the Android build
 
 1. Erase dtbo partition: `fastboot erase dtbo`
-2. Flash the appropriate U-Boot build from [here](https://github.com/sm7150-mainline/u-boot/releases) to boot partition.
+2. Flash the appropriate U-Boot build from [here](https://github.com/sdm710-mainline/u-boot/releases) to boot partition.
 
 ## Additional repositories required to build
 
 | Path | Source |
 |------|--------|
-| kernel/mainline/sm7150-mainline | https://github.com/sm7150-mainline/linux (branch: `v6.19`) |
-| vendor/xiaomi/davinci | https://wiki.lineageos.org/devices/davinci/build/variant1/#extract-proprietary-blobs |
+| kernel/mainline/sdm710-mainline | https://github.com/sdm710-mainline/linux (branch: `v6.19`) |
+| vendor/xiaomi/pyxis | https://wiki.lineageos.org/devices/pyxis/build/variant1/#extract-proprietary-blobs |
 
 ## Kernel patches
 
