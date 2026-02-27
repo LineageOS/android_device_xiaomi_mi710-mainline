@@ -9,6 +9,7 @@ TARGET_DEVICE_PATH := device/xiaomi/mi710-mainline/pyxis_mainline
 ## SoC
 TARGET_QCOM_SOC := sdm710
 ## TODO: Bringup the corresponding hardware and remove the following definitions
+TARGET_AUDIO_HAL := default-aidl
 TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
@@ -18,10 +19,6 @@ $(call inherit-product, device/xiaomi/mi710-mainline/device.mk)
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.pyxis_mainline.xml
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
