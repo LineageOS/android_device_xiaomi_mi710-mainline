@@ -17,7 +17,7 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(TARGET_DEVICE_PATH)/misc/fastboot-info.txt
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := pyxis_mainline,pyxis,pyxisin
+TARGET_OTA_ASSERT_DEVICE := pyxis_mainline,pyxis,vela
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728

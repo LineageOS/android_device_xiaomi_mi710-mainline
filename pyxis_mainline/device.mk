@@ -16,6 +16,7 @@ include device/mainline/qcom-common/optional/options.mk
 $(call inherit-product, device/xiaomi/mi710-mainline/device.mk)
 
 # AAPT
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
