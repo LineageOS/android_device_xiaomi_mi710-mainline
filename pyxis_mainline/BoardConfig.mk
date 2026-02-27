@@ -8,7 +8,8 @@ include device/xiaomi/mi710-mainline/BoardConfig.mk
 
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
-    androidboot.hardware=pyxis
+    androidboot.hardware=pyxis \
+    regulator_ignore_unused
 
 # Display
 TARGET_SCREEN_DENSITY := 440
