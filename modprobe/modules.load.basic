@@ -1,7 +1,0 @@
-nvmem_qcom-spmi-sdam.ko
-qcom-spmi-adc5.ko
-
-leds-qcom-lpg.ko
-qcom-rng.ko
-qcom-wdt.ko
-qcom_qg.ko

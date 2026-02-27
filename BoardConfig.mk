@@ -55,14 +55,7 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.basic))
-
-BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.basic))
-RECOVERY_KERNEL_MODULES := \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.include_dep.basic)) \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.basic))
+## TBD
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
