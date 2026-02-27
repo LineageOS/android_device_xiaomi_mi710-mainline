@@ -38,11 +38,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_SOURCE := kernel/mainline/sdm710-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/sdm670-mainline
 
 TARGET_KERNEL_CONFIG := \
     defconfig \
-    sdm710.config
+    sdm670.config
 
 TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/android-base-pre/common.config \
@@ -52,8 +52,7 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/common.config \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
-    kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(DEVICE_PATH)/kconfigs/fixups.config
+    kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
