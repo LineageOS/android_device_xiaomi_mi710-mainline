@@ -1,0 +1,43 @@
+From 65bec22e888286d9590c500e9648b04085acc769 Mon Sep 17 00:00:00 2001
+From: Yumi Yukimura <me.cafebabe@gmail.com>
+Date: Sat, 28 Feb 2026 17:45:11 +0800
+Subject: [PATCH] changes for pyxis and vela
+
+---
+ dts/upstream/src/arm64/qcom/sdm710-xiaomi-pyxis.dts |  2 +-
+ dts/upstream/src/arm64/qcom/sdm710-xiaomi-vela.dts  | 10 ++++++++++
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+ create mode 100644 dts/upstream/src/arm64/qcom/sdm710-xiaomi-vela.dts
+
+diff --git a/dts/upstream/src/arm64/qcom/sdm710-xiaomi-pyxis.dts b/dts/upstream/src/arm64/qcom/sdm710-xiaomi-pyxis.dts
+index f82a7135204..fc23dd0debe 100644
+--- a/dts/upstream/src/arm64/qcom/sdm710-xiaomi-pyxis.dts
++++ b/dts/upstream/src/arm64/qcom/sdm710-xiaomi-pyxis.dts
+@@ -22,7 +22,7 @@
+ 
+ / {
+ 	model = "Xiaomi Mi 9 Lite (xiaomi-pyxis)";
+-	compatible = "qcom,sdm670-mtp", "qcom,sdm670", "qcom,mtp";
++	compatible = "xiaomi,pyxis", "qcom,sdm710";
+ 	qcom,msm-id = <0x360 0 393 0>;
+ 	qcom,board-id = <35 0>;
+ 	chassis-type = "handset";
+diff --git a/dts/upstream/src/arm64/qcom/sdm710-xiaomi-vela.dts b/dts/upstream/src/arm64/qcom/sdm710-xiaomi-vela.dts
+new file mode 100644
+index 00000000000..124b30c3f1b
+--- /dev/null
++++ b/dts/upstream/src/arm64/qcom/sdm710-xiaomi-vela.dts
+@@ -0,0 +1,10 @@
++// SPDX-License-Identifier: GPL-2.0
++
++/dts-v1/;
++#include "sdm710-xiaomi-pyxis.dts"
++
++/ {
++	model = "Xiaomi Mi CC 9 Meitu Edition (xiaomi-vela)";
++	compatible = "xiaomi,vela", "qcom,sdm710";
++	qcom,board-id = <38 0>;
++};
+-- 
+2.47.3
+
