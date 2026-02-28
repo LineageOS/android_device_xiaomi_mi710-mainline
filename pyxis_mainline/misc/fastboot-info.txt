@@ -3,7 +3,7 @@ version 1
 
 update-super
 
-flash boot
+flash cust
 
 flash system_dlkm
 flash vendor_dlkm

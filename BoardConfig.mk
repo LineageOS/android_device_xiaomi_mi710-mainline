@@ -18,6 +18,7 @@ BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_QCOM_KERNEL_PARAMS) \
     $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS) \
     androidboot.fstab_suffix=mi710 \
+    androidboot.verifiedbootstate=orange \
     console=tty0
 
 BOARD_KERNEL_CMDLINE += \
@@ -112,6 +113,9 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab/fstab.mi710
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/misc
 
 # VINTF
 DEVICE_MANIFEST_FILE := \
