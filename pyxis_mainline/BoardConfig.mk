@@ -18,7 +18,9 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(TARGET_DEVICE_PATH)/misc/fastboot-info.txt
 
 # Kernel
-TARGET_DTB_LIST_WILDCARD := qcom/sdm710-xiaomi-pyxis
+TARGET_DTB_LIST_WILDCARD := \
+    qcom/sdm710-xiaomi-pyxis \
+    qcom/sdm710-xiaomi-vela
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := pyxis_mainline,pyxis,vela
