@@ -1,0 +1,17 @@
+rmtfs_mem.ko
+gpi.ko
+i2c-qcom-geni.ko
+spi-geni-qcom.ko
+llcc-qcom.ko
+phy-qcom-qusb2.ko
+i2c-qcom-cci.ko
+icc-osm-l3.ko
+lmh.ko
+pinctrl-sdm670-lpass-lpi.ko
+ufs-qcom.ko
+phy-qcom-qmp-ufs.ko
+qcom-spmi-temp-alarm.ko
+rtc-pm8xxx.ko
+qcom-pon.ko
+qcom-spmi-adc5.ko
+qcom-spmi-adc-tm5.ko

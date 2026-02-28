@@ -1,0 +1,42 @@
+# Bluetooth
+hci_uart
+
+# Camera
+qcom-camss
+
+# LEDs
+leds-qcom-lpg
+
+# Media
+venus-core
+venus-dec
+venus-enc
+
+# Misc
+fastrpc
+
+# Net
+ipa
+
+# NFC
+nxp-nci_i2c
+nxp-nci
+
+# Remoteproc
+qcom_q6v5_mss
+qcom_q6v5_pas
+
+# Sound
+apr
+q6adm
+q6afe-clocks
+q6afe-dai
+q6afe
+q6asm-dai
+q6asm
+q6core
+snd-soc-msm8916-analog
+snd-soc-msm8916-digital
+
+# Wi-Fi
+ath10k_snoc
