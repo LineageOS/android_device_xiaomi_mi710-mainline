@@ -9,7 +9,7 @@
 
 | Path | Source |
 |------|--------|
-| kernel/mainline/sdm710-mainline | https://github.com/sdm710-mainline/linux (branch: `v6.19`) |
+| kernel/mainline/sdm670-mainline | https://github.com/ellyq/sdm710-mainline (branch: `on-stable`) |
 | vendor/xiaomi/sdm710-common | https://wiki.lineageos.org/devices/pyxis/build/variant1/#extract-proprietary-blobs |
 
 ## Kernel patches
