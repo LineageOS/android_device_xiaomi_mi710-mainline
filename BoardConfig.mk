@@ -54,18 +54,17 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(DEVICE_PATH)/kconfigs/drm-sysfb.config
+    $(DEVICE_PATH)/kconfigs/drm-sysfb.config \
+    $(DEVICE_PATH)/kconfigs/make-basic-drivers-builtin.config
 
 # Kernel modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.basic)) \
     $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.drm)) \
     $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.touchscreen))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD) \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.include_dep.basic)) \
     $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.include_dep.drm))
 
 # Partitions

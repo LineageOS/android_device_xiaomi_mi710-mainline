@@ -11,5 +11,4 @@ drm_shmem_helper.ko
 drm_sysfb_helper.ko
 gpu-sched.ko
 mdt_loader.ko
-ocmem.ko
 ubwc_config.ko
