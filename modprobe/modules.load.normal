@@ -24,7 +24,7 @@ nxp-nci
 
 # Remoteproc
 qcom_q6v5_mss
-qcom_q6v5_pas
+#qcom_q6v5_pas (adsp remoteproc crashes, and then hangs the device)
 
 # Sound
 apr
