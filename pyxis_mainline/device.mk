@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm710-common/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_ODM)/firmware/qcom/sdm710/pyxis/a615_zap.mbn
 
 PRODUCT_PACKAGES += \
-    all_symlink_firmware_pyxis
+    all_symlink_firmware_pyxis \
+    firmware_pyxis_ipa_fws.mbn
 
 # Init
 PRODUCT_PACKAGES += \

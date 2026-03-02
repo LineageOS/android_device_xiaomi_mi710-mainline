@@ -6,5 +6,6 @@
 soong_namespace {
     imports: [
         "device/mainline/common",
+        "hardware/mainline/qcom",
     ],
 }
