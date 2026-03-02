@@ -102,7 +102,9 @@ BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 # Partitions - reserved size
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
-    $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 30720000))
+    $(eval BOARD_USES_$(call to-upper, $(p))IMAGE := true) \
+    $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1) \
+    $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 83886080))
 
 # Platform
 TARGET_BOARD_PLATFORM := mi710
