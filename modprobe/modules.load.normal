@@ -1,49 +1,5 @@
 # First to load
 reset-qcom-pdc
 
-# Bluetooth
-hci_uart
-
-# Camera
-qcom-camss
-
-# LEDs
-leds-qcom-lpg
-
-# Media
-venus-core
-venus-dec
-venus-enc
-
-# Misc
-fastrpc
-
 # Net
-ipa
 qrtr-smd
-
-# NFC
-nxp-nci_i2c
-nxp-nci
-
-# Remoteproc
-qcom_q6v5_mss
-#qcom_q6v5_pas (adsp remoteproc crashes, and then hangs the device)
-
-# SoC
-#qcom_pd_mapper (crashes the device)
-
-# Sound
-apr
-q6adm
-q6afe-clocks
-q6afe-dai
-q6afe
-q6asm-dai
-q6asm
-q6core
-snd-soc-msm8916-analog
-snd-soc-msm8916-digital
-
-# Wi-Fi
-ath10k_snoc
