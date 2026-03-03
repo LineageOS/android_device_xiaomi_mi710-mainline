@@ -108,9 +108,6 @@ $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_EXTFS_INODE_COUNT := -1) \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 83886080))
 
-# Platform
-TARGET_BOARD_PLATFORM := mi710
-
 # Ramdisk
 BOARD_RAMDISK_USE_LZ4 := true
 
