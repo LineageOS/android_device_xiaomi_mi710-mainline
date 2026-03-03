@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/mi710-mainline
+COMMON_PATH := device/xiaomi/mi710-mainline
 
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     init.mi710.rc \
     init.recovery.mi710.rc
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_mi710_mainline)
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_mi710_mainline)
 
 PRODUCT_PACKAGES += \
     use_memfd.rc
@@ -46,7 +46,7 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlays/overlay
+    $(COMMON_PATH)/overlays/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -60,7 +60,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
+    $(COMMON_PATH) \
     kernel/mainline/configs
 
 # Inherit from vendor

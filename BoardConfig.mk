@@ -54,18 +54,18 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(DEVICE_PATH)/kconfigs/drm-sysfb.config \
-    $(DEVICE_PATH)/kconfigs/make-basic-drivers-builtin.config
+    $(COMMON_PATH)/kconfigs/drm-sysfb.config \
+    $(COMMON_PATH)/kconfigs/make-basic-drivers-builtin.config
 
 # Kernel modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.drm)) \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.load.touchscreen))
+    $(strip $(shell cat $(COMMON_PATH)/modprobe/modules.load.drm)) \
+    $(strip $(shell cat $(COMMON_PATH)/modprobe/modules.load.touchscreen))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD) \
-    $(strip $(shell cat $(DEVICE_PATH)/modprobe/modules.include_dep.drm))
+    $(strip $(shell cat $(COMMON_PATH)/modprobe/modules.include_dep.drm))
 
 # Partitions
 #BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -112,14 +112,14 @@ TARGET_BOARD_PLATFORM := mi710
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab/fstab.mi710
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/fstab/fstab.mi710
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/misc
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/misc
 
 # VINTF
 DEVICE_MANIFEST_FILE := \
-    $(DEVICE_PATH)/vintf/manifest.xml
+    $(COMMON_PATH)/vintf/manifest.xml
 
 # Inherit from vendor
 -include vendor/xiaomi/mi710-mainline/BoardConfigVendor.mk
