@@ -1,4 +1,4 @@
-# Android device tree for Xiaomi devices with SDM710 SoC running mainline kernel
+# Common Android device tree for Xiaomi devices with SDM710 SoC running mainline kernel
 
 ## Before flashing the Android build
 

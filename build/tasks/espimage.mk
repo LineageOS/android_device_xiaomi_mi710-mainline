@@ -9,7 +9,7 @@ BOOTMGR_TOOLS_BIN_DIR := prebuilts/bootmgr/tools/$(HOST_PREBUILT_TAG)/bin
 
 GRUB_ARCH := arm64-efi
 GRUB_BOOT_EFI_PREBUILT := device/virt/virtio_arm64/bootmgr/grub/prebuilt/boot/BOOTAA64.EFI
-GRUB_CONFIGS := $(DEVICE_PATH)/misc/grub.cfg
+GRUB_CONFIGS := $(COMMON_PATH)/misc/grub.cfg
 GRUB_PREBUILT_DIR := prebuilts/bootmgr/grub/linux-arm64/$(GRUB_ARCH)
 
 ESP_OUT_DIR := $(TARGET_OUT_INTERMEDIATES)/ESP
@@ -30,7 +30,7 @@ INSTALLED_MI710_ESPIMAGE_TARGET_DEPS := \
 # $(4): image size in MB (optional)
 define create-fat32image
 	[ $(4) ] && [ $(4) -gt 0 ] && img_size=$(4) || \
-		img_size=$$(python3 $(DEVICE_PATH)/build/tools/calc_fat32_img_size.py --label $(3) $(2)); \
+		img_size=$$(python3 $(COMMON_PATH)/build/tools/calc_fat32_img_size.py --label $(3) $(2)); \
 		/bin/dd if=/dev/zero of=$(1) bs=1M count=$$img_size
 	/sbin/mkfs.fat -n "$(3)" -F 32 -S 4096 $(1)
 	$(foreach content,$(2),$(BOOTMGR_TOOLS_BIN_DIR)/mcopy -i $(1) -s $(content) :: &&)true
