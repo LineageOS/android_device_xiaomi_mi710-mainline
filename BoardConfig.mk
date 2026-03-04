@@ -57,7 +57,6 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(COMMON_PATH)/kconfigs/drm-sysfb.config \
     $(COMMON_PATH)/kconfigs/make-basic-drivers-builtin.config
 
 # Kernel modules

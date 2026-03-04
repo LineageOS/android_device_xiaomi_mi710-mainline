@@ -7,8 +7,6 @@ drm_dp_aux_bus.ko
 drm_exec.ko
 drm_gpuvm.ko
 drm_kms_helper.ko
-drm_shmem_helper.ko
-drm_sysfb_helper.ko
 gpu-sched.ko
 mdt_loader.ko
 ubwc_config.ko
