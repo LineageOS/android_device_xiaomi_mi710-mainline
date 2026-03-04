@@ -1,6 +1,11 @@
 # First to load
 reset-qcom-pdc
 
+# Media
+venus-core
+venus-dec
+venus-enc
+
 # Net
 qrtr-smd
 
@@ -44,7 +49,6 @@ socinfo
 v4l2_async
 v4l2_fwnode
 v4l2_mem2mem
-venus_core
 videobuf2_common
 videobuf2_dma_sg
 videobuf2_memops
