@@ -116,6 +116,3 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/misc
 # VINTF
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest.xml
-
-# Inherit from vendor
--include vendor/xiaomi/mi710-mainline/BoardConfigVendor.mk
