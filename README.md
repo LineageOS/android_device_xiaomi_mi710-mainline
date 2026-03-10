@@ -12,6 +12,10 @@
 | kernel/mainline/sdm670-mainline | https://github.com/ellyq/sdm710-mainline (branch: `on-stable`) |
 | vendor/xiaomi/sdm710-common | https://wiki.lineageos.org/devices/pyxis/build/variant1/#extract-proprietary-blobs |
 
+## Kernel edits
+
+- After applying kernel patches specified below, on `mm/Kconfig`, on config option `MEMFD_ASHMEM_SHIM`, remove the dependency on `ASHMEM_C`.
+
 ## Kernel patches
 
 | Commit name | Purpose | Source |
