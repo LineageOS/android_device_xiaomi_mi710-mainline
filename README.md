@@ -5,6 +5,15 @@
 1. Erase dtbo partition: `fastboot erase dtbo`
 2. Flash the appropriate U-Boot build from [here](prebuilts) to boot partition.
 
+## Notes regarding USB
+
+Due to an issue with USB in the mainline kernel, the device appears to hang on the second USB insertion.
+
+Therefore:
+
+- Please flash the build by flashing the built images via fastbootd mode in Android recovery with downstream kernel. Flashing via in Android recovery with mainline kernel may NOT work. Flashing the OTA package in Android recovery with downstream kernel will NOT work, due to lack of some recently required userspace APIs in the kernel.
+- When booting the recovery image built from this device tree, it will NOT enter recovery mode by default. This is because of we want a usable ADB interface at least. To start recovery mode, run the ADB command `adb shell start recovery`.
+
 ## Additional repositories required to build
 
 | Path | Source |
